@@ -8,7 +8,7 @@ const {client_url} =require("./config")
 app.use(express.json());
 
 app.use("/user", router)
-app.user(cors({
+app.use(cors({
     credentials: true,
     origin: client_url
 }))
