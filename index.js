@@ -10,8 +10,10 @@ app.use(express.json());
 app.use("/user", router)
 app.use(cors({
     credentials: true,
-    origin: "*"
-}))
+    origin: "*",
+    methods: "GET,POST,PUT,DELETE,OPTIONS",
+    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+}));
 
 const start = () => {
     app.listen(PORT, () => console.log("server started"));
