@@ -10,9 +10,7 @@ app.use(express.json());
 app.use("/user", router)
 app.use(cors({
     credentials: true,
-    origin: function (origin, callback) {
-        callback(null, true);
-    },
+    origin: "*"
 }))
 
 const start = () => {
